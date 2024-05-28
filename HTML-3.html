@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模擬付款畫面(版3)</title>
+</head>
+
+
+
+<body>
+    <h1>線上pay.3</h1>
+    <p>請輸入付款金額</p>
+
+    <br>
+
+    <input type="number" vaule="0" min="1" placeholder="000000">
+    <button onclick="myFunction(); "> 送出 </button>
+        <script>
+            var myFunction = function(){
+            let answer = confirm('請確認支付金額');
+            if(answer){
+              confirm('已完成支付');
+              window.location.replace(window.location.href);  <!----刷新當前頁面--->
+            }else{
+              alert('取消支付');
+              window.location.assign(window.location.href);  <!--刷新當前頁面-->
+        }
+          }
+
+        </script>
+
+</body>
+
+
+</html>
